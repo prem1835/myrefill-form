@@ -1,5 +1,7 @@
 import React from "react";
-import InputBox from "./InputBox";
+import InputBox from "./common/InputBox";
+import BussinessHourBox from "./common/BussinessHourBox";
+import ChargeBox from "./common/ChargeBox";
 const AddStation = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -30,6 +32,30 @@ const AddStation = () => {
         <InputBox name="state" label="State" />
         <InputBox name="city" label="City" />
         <InputBox name="pin-code" label="Pin Code" />
+        <h3 style={{ textAlign: "center", margin: "3rem 0" }}>
+          Business Hours
+        </h3>
+        <BussinessHourBox name={"monday"} label={"Monday"} />
+        <BussinessHourBox name={"tuesday"} label={"Tuesday"} />
+        <BussinessHourBox name={"wednesday"} label={"Wednesday"} />
+        <BussinessHourBox name={"thursday"} label={"Thursday"} />
+        <BussinessHourBox name={"friday"} label={"Friday"} />
+        <BussinessHourBox name={"saturday"} label={"Saturday"} />
+        <BussinessHourBox name={"sunday"} label={"Sunday"} />
+        <h3 style={{ textAlign: "center", margin: "3rem 0" }}>Locate in map</h3>
+        <div className="chargeBox">
+          <ChargeBox name="chargesFor1" label="Charges for 1 litre" />
+          <ChargeBox name="cafeShare" label="Cafe Share" />
+          <ChargeBox name="ourShare" label="our Share" />
+        </div>
+        <div className="chargeBox">
+          <ChargeBox name="chargesFor500" label="Charges for 500ml" />
+          <ChargeBox name="cafeShare" label="Cafe Share" />
+          <ChargeBox name="ourShare" label="our Share" />
+        </div>
+        <div style={{ textAlign: "center" }}>
+          <input type="submit" value="SAVE" className="saveBtn" />
+        </div>
       </form>
     </div>
   );

@@ -74,3 +74,36 @@ body {
   border: 2px solid;
   padding: 12px;
 }
+.hour__container {
+  position: relative;
+  margin-bottom: 8%;
+}
+.hour-input__box {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  align-items: center;
+  width: 100%;
+}
+.hour__input {
+  padding: 15px 0;
+  width: 20%;
+  border-radius: 5px;
+  border: 2px solid;
+}
+.chargeBox {
+  margin: 1.5rem;
+  text-align: center;
+}
+.saveBtn {
+  border: 2px solid;
+  border-radius: 5px;
+  background: transparent;
+  padding: 13px 0;
+  width: 28%;
+  margin: 2rem 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}

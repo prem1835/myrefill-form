@@ -4,7 +4,7 @@ import TopBar from "./components/TopBar";
 import SideBar from "./components/SideBar";
 import "./App.css";
 import AddStation from "./components/AddStation";
-import Stations from "./components/StationsList";
+import Stations from "./components/common/StationsList";
 import StationProfile from "./components/StationProfile";
 
 function App() {

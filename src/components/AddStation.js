@@ -2,6 +2,8 @@ import React from "react";
 import InputBox from "./common/InputBox";
 import BussinessHourBox from "./common/BussinessHourBox";
 import ChargeBox from "./common/ChargeBox";
+import MyMapComponent from "./common/Google";
+
 const AddStation = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -43,6 +45,13 @@ const AddStation = () => {
         <BussinessHourBox name={"saturday"} label={"Saturday"} />
         <BussinessHourBox name={"sunday"} label={"Sunday"} />
         <h3 style={{ textAlign: "center", margin: "3rem 0" }}>Locate in map</h3>
+        <MyMapComponent
+          isMarkerShown={false}
+          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `400px` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+        />
         <div className="chargeBox">
           <ChargeBox name="chargesFor1" label="Charges for 1 litre" />
           <ChargeBox name="cafeShare" label="Cafe Share" />
